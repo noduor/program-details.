@@ -202,6 +202,28 @@
             color: #ffd700;
         }
         
+        .venue-item {
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+        }
+        
+        .venue-item i {
+            margin-right: 10px;
+            color: #ffd700;
+        }
+        
+        .attendance-item {
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+        }
+        
+        .attendance-item i {
+            margin-right: 10px;
+            color: #ffd700;
+        }
+        
         .cta-button {
             display: inline-block;
             padding: 15px 40px;
@@ -637,6 +659,11 @@
             .mobile-toggle {
                 display: block;
             }
+            
+            .event-details-row {
+                flex-direction: column;
+                gap: 15px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -662,37 +689,74 @@
         }
 
         .logo {
-    display: flex;
-    align-items: center;
-    gap: 20px; 
-}
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+        }
 
-.logo-image-container {
-    width: 120px; 
-    height: 80px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .logo-image-container {
+            width: 120px; 
+            height: 80px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.logo-img {
-    width: 100%; 
-    height: 100%;
-    object-fit: contain; 
-}
+        .logo-img {
+            width: 100%; 
+            height: 100%;
+            object-fit: contain; 
+        }
 
-.logo-text {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-
-.flag-container {
-    display: none;
-}
+        .flag-container {
+            display: none;
+        }
+        
+        .event-details-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            min-width: 200px;
+        }
+        
+        .info-box i {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+        
+        .info-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .speaker-category {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            font-size: 1.4rem;
+        }
     </style>
 </head>
 <body>
@@ -704,12 +768,12 @@
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
-<div class="logo">
-    <div class="logo-image-container">
-        <img src="logo.png" alt="Fortune Generation Logo" class="logo-img">
-    </div>
-    <div class="logo-text">Program Details</div>
-</div>
+            <div class="logo">
+                <div class="logo-image-container">
+                    <img src="logo.png" alt="Fortune Generation Logo" class="logo-img">
+                </div>
+                <div class="logo-text">Program Details</div>
+            </div>
             
             <div class="mobile-toggle" id="mobileToggle">
                 <i class="fas fa-bars"></i>
@@ -756,7 +820,7 @@
             </div>
             <div class="overview-content">
                 <div class="overview-text">
-                    <p>The Fortune Generation Members Chinese Business Delegation to Kenya is a high-level, invitation-only business forum designed to facilitate structured engagement between Chinese investors and Kenyan public- and private-sector stakeholders.</p>
+                    <p>The <strong>Fortune Generation Members Chinese Business Delegation to Kenya</strong> is a high-level, invitation-only business forum designed to facilitate structured engagement between Chinese investors and Kenyan public- and private-sector stakeholders.</p>
                     <p>The program is curated to move beyond introductions into practical partnership formation, investment facilitation, and long-term collaboration across priority sectors including manufacturing, energy, infrastructure, agribusiness, technology, education, and industrial development.</p>
                 </div>
                 <div class="overview-highlights">
@@ -840,12 +904,12 @@
                         <tr>
                             <td class="time-col">4:25 PM – 4:35 PM</td>
                             <td class="session-col">Keynote Address</td>
-                            <td class="details-col">Dr. James Mwaura, KNCCI – Nairobi Chapter<br><em>Topic: Investment Protection, Dispute Resolution, and Business Confidence: KNCCI's Role in Investor Assurance</em></td>
+                            <td class="details-col"><strong>Dr. James Mwaura,</strong> KNCCI – Nairobi Chapter<br><em>Topic: Investment Protection, Dispute Resolution, and Business Confidence: KNCCI's Role in Investor Assurance</em></td>
                         </tr>
                         <tr>
                             <td class="time-col">4:35 PM – 4:45 PM</td>
                             <td class="session-col">Delegation Introduction & Vision</td>
-                            <td class="details-col">Mr. Martin Hang, Founder & Chairman, Fortune Generation<br><em>Topic: Introducing the Delegation: Fortune Generation's Vision for Kenya–China Business Collaboration</em></td>
+                            <td class="details-col"><strong>Mr. Martin Hang,</strong> Founder & Chairman, Fortune Generation<br><em>Topic: Introducing the Delegation: Fortune Generation's Vision for Kenya–China Business Collaboration</em></td>
                         </tr>
                         <tr>
                             <td class="time-col">4:45 PM – 6:30 PM</td>
@@ -885,7 +949,7 @@
                         <tr>
                             <td class="time-col">9:05 AM – 9:20 AM</td>
                             <td class="session-col">Official Opening Session</td>
-                            <td class="details-col">Opening remarks and keynote address by a National/County Government Representative (TBC). Focus on Kenya's investment climate and bilateral cooperation.</td>
+                            <td class="details-col">Opening remarks and keynote address by a <strong>National/County Government Representative</strong> (TBC). Focus on Kenya's investment climate and bilateral cooperation.</td>
                         </tr>
                         <tr>
                             <td class="time-col">9:20 AM – 9:30 AM</td>
@@ -895,52 +959,87 @@
                         <tr>
                             <td class="time-col">9:30 AM – 9:45 AM</td>
                             <td class="session-col">Mr. Martin Hang</td>
-                            <td class="details-col">Founder & Chairman, Fortune Generation<br><em>Topic: Turning Connections into Contracts: Structuring Sustainable Kenya-China Business Engagements</em></td>
+                            <td class="details-col"><strong>Mr. Martin Hang,</strong> Founder & Chairman, Fortune Generation<br><em>Topic: Turning Connections into Contracts: Structuring Sustainable Kenya-China Business Engagements</em></td>
                         </tr>
                         <tr>
                             <td class="time-col">9:45 AM – 10:00 AM</td>
                             <td class="session-col">Mr. Willy Jin (Jin Shi)</td>
-                            <td class="details-col">Chief Financial Officer (CFO), YXinData Technology<br><em>Focus: Data centers, AI infrastructure, and liquid cooling technologies</em></td>
+                            <td class="details-col"><strong>Mr. Willy Jin (Jin Shi),</strong> Chief Financial Officer (CFO), YXinData Technology<br><em>Focus: Data centers, AI infrastructure, and liquid cooling technologies</em></td>
                         </tr>
                         <tr>
                             <td class="time-col">10:00 AM – 10:15 AM</td>
                             <td class="session-col">Ms. Phoebe Zhao (Zhao Xuanyi)</td>
-                            <td class="details-col">Director, Hefei Oriental Energy Saving Technology Co., Ltd.<br><em>Focus: Research, development, and manufacturing of rolling mill equipment and metallurgical machinery, serving the steel, metals, and heavy industrial sectors</em></td>
+                            <td class="details-col"><strong>Ms. Phoebe Zhao (Zhao Xuanyi),</strong> Director, Hefei Oriental Energy Saving Technology Co., Ltd.<br><em>Focus: Research, development, and manufacturing of rolling mill equipment and metallurgical machinery, serving the steel, metals, and heavy industrial sectors</em></td>
                         </tr>
                         <tr>
                             <td class="time-col">10:15 AM – 10:30 AM</td>
                             <td class="session-col">Mr. Duke Wu</td>
-                            <td class="details-col">Board Member, China East Education Group<br><em>Focus: Vocational education, skills development, and international training partnerships</em></td>
+                            <td class="details-col"><strong>Mr. Duke Wu,</strong> Board Member, China East Education Group<br><em>Focus: Vocational education, skills development, and international training partnerships</em></td>
                         </tr>
                         <tr>
                             <td class="time-col">10:30 AM – 10:45 AM</td>
                             <td class="session-col">Ms. Cindy Wu</td>
-                            <td class="details-col">Chief Information Officer (CIO), Xi'an Lanshen New Material Technology Co., Ltd<br><em>Focus: A high-tech enterprise specializing in the research, development, manufacturing, and application of polymer functional separation materials</em></td>
+                            <td class="details-col"><strong>Ms. Cindy Wu,</strong> Chief Information Officer (CIO), Xi'an Lanshen New Material Technology Co., Ltd<br><em>Focus: A high-tech enterprise specializing in the research, development, manufacturing, and application of polymer functional separation materials</em></td>
                         </tr>
                         <tr>
                             <td class="time-col">10:45 AM – 11:00 AM</td>
                             <td class="session-col">Mr. Yisen Sun</td>
-                            <td class="details-col">Senior Executive / Group Representative, Zhejiang Jingyang Mechanical & Electrical Co., Ltd.<br><em>Focus: Photovoltaic manufacturing equipment and renewable energy value chains</em></td>
+                            <td class="details-col"><strong>Mr. Yisen Sun,</strong> Senior Executive / Group Representative, Zhejiang Jingyang Mechanical & Electrical Co., Ltd.<br><em>Focus: Photovoltaic manufacturing equipment and renewable energy value chains</em></td>
                         </tr>
                         <tr>
                             <td class="time-col">11:00 AM – 11:15 AM</td>
                             <td class="session-col">Ms. Lulu Meng</td>
-                            <td class="details-col">Chief Executive Officer (CEO), Enjoy Airport Commercial Group / Enjoy Airport Commercial Institution<br><em>Focus: A leading airport commercial operations enterprise specializing in retail, catering, and consumer services within airport environments</em></td>
+                            <td class="details-col"><strong>Ms. Lulu Meng,</strong> Chief Executive Officer (CEO), Enjoy Airport Commercial Group / Enjoy Airport Commercial Institution<br><em>Focus: A leading airport commercial operations enterprise specializing in retail, catering, and consumer services within airport environments. The Group operates an integrated business model covering brand integration management, airport commercial planning, and end-to-end retail and catering services.</em></td>
                         </tr>
                         <tr>
                             <td class="time-col">11:15 AM – 11:30 AM</td>
                             <td class="session-col">TEA / COFFEE BREAK</td>
-                            <td class="details-col">Networking Break</td>
+                            <td class="details-col">NETWORKING BREAK</td>
                         </tr>
                         <tr>
                             <td class="time-col">11:30 AM – 11:45 AM</td>
                             <td class="session-col">Mr. Robert Sun</td>
-                            <td class="details-col">ACCS President, American-Chinese Ceo Society - Africa Chapter<br><em>Topic: From Entry to Expansion: Insights from ACCS Africa Chapter</em></td>
+                            <td class="details-col"><strong>Mr. Robert Sun,</strong> ACCS President, American-Chinese Ceo Society - Africa Chapter<br><em>Topic: From Entry to Expansion: Insights from ACCS Africa Chapter</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:45 AM – 12:00 PM</td>
+                            <td class="session-col">Eng. George Ruoth</td>
+                            <td class="details-col"><strong>Eng. George Ruoth,</strong> Chairman, Safari Financial Holdings Ltd<br><em>Topic: Moving Kenya to 1st World through Equity-Led Capital Formation Framework</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">12:00 PM – 12:15 PM</td>
+                            <td class="session-col">Mr. Moses Kipkebut</td>
+                            <td class="details-col"><strong>Mr. Moses Kipkebut,</strong> Ag. General Manager Investment and Corporate Communications, EPZA Kenya<br><em>Topic: Investment incentives, export processing zones, and investor facilitation</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">12:15 PM – 12:25 PM</td>
+                            <td class="session-col">Mr. Michael Ngugi</td>
+                            <td class="details-col"><strong>Mr. Michael Ngugi,</strong> Head of Trade Development, Lamu Port-South Sudan Ethiopia Transport Corridor (LAPSSET)<br><em>Topic: Regional infrastructure, trade corridors, and logistics opportunities</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">12:25 PM – 12:40 PM</td>
+                            <td class="session-col">Mr. Duncan Oduor</td>
+                            <td class="details-col"><strong>Mr. Duncan Oduor,</strong> Chairman, Taifa La Fursa<br><em>Topic: Proposed Kurawa Industrial City: Industrial city development and manufacturing clusters</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">12:40 PM – 12:55 PM</td>
+                            <td class="session-col">Mr. Kennedy Ochieng</td>
+                            <td class="details-col"><strong>Mr. Kennedy Ochieng,</strong> Program Director, Taifa La Fursa<br><em>Topic: Business Networking Objective & Vote of Thanks</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">12:55 PM – 2:30 PM</td>
+                            <td class="session-col">Lunch Break</td>
+                            <td class="details-col">Hosted networking lunch</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">2:30 PM – 6:30 PM</td>
+                            <td class="session-col">Structured Business Networking Sessions</td>
+                            <td class="details-col">Sector-based and interest-aligned B2B and B2G meetings facilitated by Fortune Generation & Taifa La Fursa Team</td>
                         </tr>
                         <tr>
                             <td class="time-col">7:00 PM</td>
                             <td class="session-col">Private Dinner</td>
-                            <td class="details-col">Invitation-only dinner for delegates and selected partners.</td>
+                            <td class="details-col">Invitation-only dinner for delegates and selected partners</td>
                         </tr>
                     </tbody>
                 </table>
@@ -954,7 +1053,14 @@
             <div class="section-title">
                 <h2>Featured Speakers</h2>
             </div>
-            <div class="speakers-container" id="speakersContainer">
+            
+            <h3 class="speaker-category">Chinese Delegation Speakers</h3>
+            <div class="speakers-container" id="chineseSpeakersContainer">
+                <!-- Filled by JavaScript -->
+            </div>
+            
+            <h3 class="speaker-category">Kenyan & Institutional Speakers</h3>
+            <div class="speakers-container" id="kenyanSpeakersContainer">
                 <!-- Filled by JavaScript -->
             </div>
         </div>
@@ -1007,9 +1113,9 @@
                     <h3>Event Details</h3>
                     <ul>
                         <li><i class="fas fa-calendar"></i> 21-22 January 2026</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
-                        <li><i class="fas fa-users"></i> Invitation-only Forum</li>
-                        <li><i class="fas fa-handshake"></i> High-level Business Engagement</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ole Sereni Hotel, Nairobi, Kenya</li>
+                        <li><i class="fas fa-users"></i> By Special Invitation Only</li>
+                        <li><i class="fas fa-tag"></i> Complimentary Participation</li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1028,12 +1134,13 @@
                         <li><strong>Facilitator:</strong> Fortune Generation Organization</li>
                         <li><strong>Organizer:</strong> Taifa La Fursa</li>
                         <li><strong>Strategic Focus:</strong> Kenya-China investment partnerships</li>
+                        <li><strong>Venue:</strong> Ole Sereni Hotel, Nairobi</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
                 <p>&copy; 2026 Fortune Generation Chinese Business Delegation to Kenya. All rights reserved.</p>
-                <p>This is an invitation-only high-level business forum.</p>
+                <p>This is an invitation-only high-level business forum. All sessions are complimentary for invited delegates.</p>
             </div>
         </div>
     </footer>
@@ -1138,7 +1245,7 @@
         updateCountdown(); // Run immediately
         
         // Speakers data
-        const speakers = [
+        const chineseSpeakers = [
             {
                 name: "Mr. Martin Hang",
                 title: "Founder & Chairman, Fortune Generation",
@@ -1173,21 +1280,54 @@
                 name: "Ms. Lulu Meng",
                 title: "CEO, Enjoy Airport Commercial Group",
                 topic: "Airport commercial operations specializing in retail, catering, and consumer services"
+            }
+        ];
+        
+        const kenyanSpeakers = [
+            {
+                name: "Dr. James Mwaura",
+                title: "KNCCI – Nairobi Chapter",
+                topic: "Investment Protection, Dispute Resolution, and Business Confidence: KNCCI's Role in Investor Assurance"
             },
             {
                 name: "Mr. Robert Sun",
                 title: "ACCS President, American-Chinese Ceo Society - Africa Chapter",
                 topic: "From Entry to Expansion: Insights from ACCS Africa Chapter"
+            },
+            {
+                name: "Eng. George Ruoth",
+                title: "Chairman, Safari Financial Holdings Ltd",
+                topic: "Moving Kenya to 1st World through Equity-Led Capital Formation Framework"
+            },
+            {
+                name: "Mr. Moses Kipkebut",
+                title: "Ag. General Manager Investment and Corporate Communications, EPZA Kenya",
+                topic: "Investment incentives, export processing zones, and investor facilitation"
+            },
+            {
+                name: "Mr. Michael Ngugi",
+                title: "Head of Trade Development, LAPSSET Corridor",
+                topic: "Regional infrastructure, trade corridors, and logistics opportunities"
+            },
+            {
+                name: "Mr. Duncan Oduor",
+                title: "Chairman, Taifa La Fursa",
+                topic: "Proposed Kurawa Industrial City: Industrial city development and manufacturing clusters"
+            },
+            {
+                name: "Mr. Kennedy Ochieng",
+                title: "Program Director, Taifa La Fursa",
+                topic: "Business Networking Objective & Vote of Thanks"
             }
         ];
         
-        // Populate speakers
-        const speakersContainer = document.getElementById('speakersContainer');
-        speakers.forEach(speaker => {
+        // Populate Chinese speakers
+        const chineseSpeakersContainer = document.getElementById('chineseSpeakersContainer');
+        chineseSpeakers.forEach(speaker => {
             const speakerCard = document.createElement('div');
             speakerCard.className = 'speaker-card';
             speakerCard.innerHTML = `
-                <div class="speaker-img">
+                <div class="speaker-img" style="background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));">
                     <i class="fas fa-user-tie"></i>
                 </div>
                 <div class="speaker-info">
@@ -1196,7 +1336,25 @@
                     <p class="speaker-topic">${speaker.topic}</p>
                 </div>
             `;
-            speakersContainer.appendChild(speakerCard);
+            chineseSpeakersContainer.appendChild(speakerCard);
+        });
+        
+        // Populate Kenyan speakers
+        const kenyanSpeakersContainer = document.getElementById('kenyanSpeakersContainer');
+        kenyanSpeakers.forEach(speaker => {
+            const speakerCard = document.createElement('div');
+            speakerCard.className = 'speaker-card';
+            speakerCard.innerHTML = `
+                <div class="speaker-img" style="background: linear-gradient(45deg, var(--accent-color), var(--accent-color2));">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="speaker-info">
+                    <h3 class="speaker-name">${speaker.name}</h3>
+                    <p class="speaker-title">${speaker.title}</p>
+                    <p class="speaker-topic">${speaker.topic}</p>
+                </div>
+            `;
+            kenyanSpeakersContainer.appendChild(speakerCard);
         });
         
         // Smooth scrolling for anchor links
@@ -1219,7 +1377,7 @@
         
         // Add animation on scroll
         function animateOnScroll() {
-            const elements = document.querySelectorAll('.speaker-card, .outcome-card, .highlight-item');
+            const elements = document.querySelectorAll('.speaker-card, .outcome-card, .highlight-item, .info-box');
             
             elements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
@@ -1233,7 +1391,7 @@
         }
         
         // Set initial state for animated elements
-        document.querySelectorAll('.speaker-card, .outcome-card, .highlight-item').forEach(el => {
+        document.querySelectorAll('.speaker-card, .outcome-card, .highlight-item, .info-box').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -1243,6 +1401,21 @@
         window.addEventListener('scroll', animateOnScroll);
         // Run once on load
         setTimeout(animateOnScroll, 300);
+        
+        // Add print functionality
+        const printButton = document.createElement('div');
+        printButton.innerHTML = `
+            <div style="text-align: center; margin-top: 30px;">
+                <button id="printAgenda" style="padding: 12px 30px; background: var(--primary-color); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">
+                    <i class="fas fa-print"></i> Print Agenda
+                </button>
+            </div>
+        `;
+        document.querySelector('#agenda .container').appendChild(printButton);
+        
+        document.getElementById('printAgenda').addEventListener('click', () => {
+            window.print();
+        });
     </script>
 </body>
 </html>
