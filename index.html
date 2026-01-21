@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Generation Members Chinese Business Delegation to Kenya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a365d; /* Deep blue from Chinese flag */
+            --secondary-color: #c8102e; /* Red from Chinese flag */
+            --accent-color: #006600; /* Green from Kenyan flag */
+            --accent-color2: #bb0000; /* Red from Kenyan flag */
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --gradient-kenya: linear-gradient(90deg, #000000 33%, #bb0000 33%, #bb0000 66%, #006600 66%);
+            --gradient-china: linear-gradient(90deg, #c8102e 50%, #1a365d 50%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #fefefe;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .header-scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+        
+        .logo-text span {
+            color: var(--secondary-color);
+        }
+        
+        .flag-container {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .flag {
+            width: 30px;
+            height: 20px;
+            border-radius: 2px;
+        }
+        
+        .flag-kenya {
+            background: var(--gradient-kenya);
+        }
+        
+        .flag-china {
+            background: var(--gradient-china);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .event-dates {
+            display: inline-flex;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 15px 5px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .date-item {
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+        }
+        
+        .date-item i {
+            margin-right: 10px;
+            color: #ffd700;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(200, 16, 46, 0.4);
+        }
+        
+        .cta-button:hover {
+            background: #ff2a52;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(200, 16, 46, 0.6);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+            40% {transform: translateY(-20px) translateX(-50%);}
+            60% {transform: translateY(-10px) translateX(-50%);}
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        /* Event Overview */
+        .overview-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .overview-text {
+            flex: 1;
+        }
+        
+        .overview-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .overview-highlights {
+            flex: 1;
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .highlight-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        /* Agenda */
+        .agenda-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .tab-btn {
+            padding: 15px 30px;
+            background: none;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--dark-color);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            color: var(--secondary-color);
+        }
+        
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+        
+        .agenda-content {
+            display: none;
+        }
+        
+        .agenda-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        
+        .agenda-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: var(--shadow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .agenda-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .agenda-table td {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .agenda-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .agenda-table tr:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .time-col {
+            width: 20%;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .session-col {
+            width: 30%;
+            font-weight: 600;
+        }
+        
+        .details-col {
+            width: 50%;
+        }
+        
+        /* Speakers */
+        .speakers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .speaker-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+        
+        .speaker-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .speaker-img {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        .speaker-info {
+            padding: 25px;
+        }
+        
+        .speaker-name {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        .speaker-title {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .speaker-topic {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+        
+        /* Outcomes */
+        .outcomes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .outcome-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--primary-color);
+        }
+        
+        .outcome-card:hover {
+            transform: translateY(-10px);
+            border-top-color: var(--secondary-color);
+        }
+        
+        .outcome-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .outcome-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 70px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Interactive Features */
+        .countdown {
+            background: linear-gradient(rgba(26, 54, 93, 0.9), rgba(26, 54, 93, 0.9));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 120px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: #ffd700;
+        }
+        
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: rgba(0, 0, 0, 0.05);
+            z-index: 1001;
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .overview-content {
+                flex-direction: column;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .agenda-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .event-dates {
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 20px;
+                margin-top: 50px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.logo-image-container {
+    width: 120px; 
+    height: 80px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain; 
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.flag-container {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+<div class="logo">
+    <div class="logo-image-container">
+        <img src="logo.png" alt="Fortune Generation Logo" class="logo-img">
+    </div>
+    <div class="logo-text">Program Details</div>
+</div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#overview">Overview</a>
+                <a href="#agenda">Agenda</a>
+                <a href="#speakers">Speakers</a>
+                <a href="#outcomes">Outcomes</a>
+                <a href="#countdown">Countdown</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="event-dates">
+                <div class="date-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>21-22 January 2026</span>
+                </div>
+                <div class="date-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Nairobi, Kenya</span>
+                </div>
+            </div>
+            <h1>Chinese Business Delegation to Kenya</h1>
+            <p>A high-level, invitation-only business forum designed to facilitate structured engagement between Chinese investors and Kenyan public- and private-sector stakeholders.</p>
+            <a href="#agenda" class="cta-button">View Full Agenda</a>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <!-- Event Overview -->
+    <section id="overview">
+        <div class="container">
+            <div class="section-title">
+                <h2>Event Overview</h2>
+            </div>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>The Fortune Generation Members Chinese Business Delegation to Kenya is a high-level, invitation-only business forum designed to facilitate structured engagement between Chinese investors and Kenyan public- and private-sector stakeholders.</p>
+                    <p>The program is curated to move beyond introductions into practical partnership formation, investment facilitation, and long-term collaboration across priority sectors including manufacturing, energy, infrastructure, agribusiness, technology, education, and industrial development.</p>
+                </div>
+                <div class="overview-highlights">
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h3>Facilitator</h3>
+                            <p>Fortune Generation Organization</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div>
+                            <h3>Organizer</h3>
+                            <p>Taifa La Fursa</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="highlight-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div>
+                            <h3>Strategic Focus</h3>
+                            <p>Kenya-China investment partnerships, Africa market entry, and scalable cross-border business models</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Countdown -->
+    <section class="countdown" id="countdown">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Countdown to the Event</h2>
+            </div>
+            <div class="countdown-container" id="countdownContainer">
+                <!-- Filled by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Agenda -->
+    <section id="agenda">
+        <div class="container">
+            <div class="section-title">
+                <h2>Event Agenda</h2>
+            </div>
+            
+            <div class="agenda-tabs">
+                <button class="tab-btn active" data-day="day1">Day 1 - 21 Jan 2026</button>
+                <button class="tab-btn" data-day="day2">Day 2 - 22 Jan 2026</button>
+            </div>
+            
+            <div id="day1" class="agenda-content active">
+                <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary-color);">Theme: Setting the Foundation for Kenya-China Business Collaboration</h3>
+                <table class="agenda-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Session</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">3:30 PM – 4:20 PM</td>
+                            <td class="session-col">Arrival & Registration<br>Tea & Snacks</td>
+                            <td class="details-col">Arrival of Chinese delegation members, Kenyan guests, government representatives, and invited stakeholders. Registration desk opens.</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">4:20 PM – 4:25 PM</td>
+                            <td class="session-col">National Anthems</td>
+                            <td class="details-col">National Anthem of the Republic of Kenya and National Anthem of the People's Republic of China.</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">4:25 PM – 4:35 PM</td>
+                            <td class="session-col">Keynote Address</td>
+                            <td class="details-col">Dr. James Mwaura, KNCCI – Nairobi Chapter<br><em>Topic: Investment Protection, Dispute Resolution, and Business Confidence: KNCCI's Role in Investor Assurance</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">4:35 PM – 4:45 PM</td>
+                            <td class="session-col">Delegation Introduction & Vision</td>
+                            <td class="details-col">Mr. Martin Hang, Founder & Chairman, Fortune Generation<br><em>Topic: Introducing the Delegation: Fortune Generation's Vision for Kenya–China Business Collaboration</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">4:45 PM – 6:30 PM</td>
+                            <td class="session-col">Networking Session I</td>
+                            <td class="details-col">Open networking among Chinese delegates, Kenyan investors, institutions, and policymakers. Designed to initiate conversations and identify alignment areas ahead of Day 2 structured sessions.</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">7:00 PM</td>
+                            <td class="session-col">Private Dinner</td>
+                            <td class="details-col">Invitation-only dinner for delegation members and selected strategic partners.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="day2" class="agenda-content">
+                <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary-color);">Theme: From Engagement to Execution: Structuring Bankable Partnerships</h3>
+                <table class="agenda-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Session</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">8:30 AM – 9:00 AM</td>
+                            <td class="session-col">Arrival & Registration</td>
+                            <td class="details-col">Arrival of delegates and guests. Morning coordination and seating.</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">9:00 AM – 9:05 AM</td>
+                            <td class="session-col">National Anthems</td>
+                            <td class="details-col">National Anthem of the Republic of Kenya and National Anthem of the People's Republic of China.</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">9:05 AM – 9:20 AM</td>
+                            <td class="session-col">Official Opening Session</td>
+                            <td class="details-col">Opening remarks and keynote address by a National/County Government Representative (TBC). Focus on Kenya's investment climate and bilateral cooperation.</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">9:20 AM – 9:30 AM</td>
+                            <td class="session-col">Introductions Session</td>
+                            <td class="details-col">Formal introduction of Chinese delegation members and key Kenyan stakeholders.</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">9:30 AM – 9:45 AM</td>
+                            <td class="session-col">Mr. Martin Hang</td>
+                            <td class="details-col">Founder & Chairman, Fortune Generation<br><em>Topic: Turning Connections into Contracts: Structuring Sustainable Kenya-China Business Engagements</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">9:45 AM – 10:00 AM</td>
+                            <td class="session-col">Mr. Willy Jin (Jin Shi)</td>
+                            <td class="details-col">Chief Financial Officer (CFO), YXinData Technology<br><em>Focus: Data centers, AI infrastructure, and liquid cooling technologies</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:00 AM – 10:15 AM</td>
+                            <td class="session-col">Ms. Phoebe Zhao (Zhao Xuanyi)</td>
+                            <td class="details-col">Director, Hefei Oriental Energy Saving Technology Co., Ltd.<br><em>Focus: Research, development, and manufacturing of rolling mill equipment and metallurgical machinery, serving the steel, metals, and heavy industrial sectors</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:15 AM – 10:30 AM</td>
+                            <td class="session-col">Mr. Duke Wu</td>
+                            <td class="details-col">Board Member, China East Education Group<br><em>Focus: Vocational education, skills development, and international training partnerships</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:30 AM – 10:45 AM</td>
+                            <td class="session-col">Ms. Cindy Wu</td>
+                            <td class="details-col">Chief Information Officer (CIO), Xi'an Lanshen New Material Technology Co., Ltd<br><em>Focus: A high-tech enterprise specializing in the research, development, manufacturing, and application of polymer functional separation materials</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:45 AM – 11:00 AM</td>
+                            <td class="session-col">Mr. Yisen Sun</td>
+                            <td class="details-col">Senior Executive / Group Representative, Zhejiang Jingyang Mechanical & Electrical Co., Ltd.<br><em>Focus: Photovoltaic manufacturing equipment and renewable energy value chains</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:00 AM – 11:15 AM</td>
+                            <td class="session-col">Ms. Lulu Meng</td>
+                            <td class="details-col">Chief Executive Officer (CEO), Enjoy Airport Commercial Group / Enjoy Airport Commercial Institution<br><em>Focus: A leading airport commercial operations enterprise specializing in retail, catering, and consumer services within airport environments</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:15 AM – 11:30 AM</td>
+                            <td class="session-col">TEA / COFFEE BREAK</td>
+                            <td class="details-col">Networking Break</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">11:30 AM – 11:45 AM</td>
+                            <td class="session-col">Mr. Robert Sun</td>
+                            <td class="details-col">ACCS President, American-Chinese Ceo Society - Africa Chapter<br><em>Topic: From Entry to Expansion: Insights from ACCS Africa Chapter</em></td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">7:00 PM</td>
+                            <td class="session-col">Private Dinner</td>
+                            <td class="details-col">Invitation-only dinner for delegates and selected partners.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Speakers -->
+    <section id="speakers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Speakers</h2>
+            </div>
+            <div class="speakers-container" id="speakersContainer">
+                <!-- Filled by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Expected Outcomes -->
+    <section id="outcomes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Expected Outcomes</h2>
+            </div>
+            <div class="outcomes-container">
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Investment Opportunities</h3>
+                    <p>Identification of bankable Kenya-China investment opportunities across key sectors.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Partnerships Formed</h3>
+                    <p>Formation of MOU, strategic partnerships and joint ventures between Chinese and Kenyan entities.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Clear Pathways</h3>
+                    <p>Clear follow-up pathways coordinated by Fortune Generation to ensure implementation.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Strengthened Collaboration</h3>
+                    <p>Strengthened institutional and private-sector collaboration between Kenya and China.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Event Details</h3>
+                    <ul>
+                        <li><i class="fas fa-calendar"></i> 21-22 January 2026</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+                        <li><i class="fas fa-users"></i> Invitation-only Forum</li>
+                        <li><i class="fas fa-handshake"></i> High-level Business Engagement</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Strategic Focus</h3>
+                    <ul>
+                        <li>Kenya-China Investment Partnerships</li>
+                        <li>Africa Market Entry</li>
+                        <li>Scalable Cross-border Business Models</li>
+                        <li>Manufacturing & Infrastructure</li>
+                        <li>Technology & Education</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Organizers</h3>
+                    <ul>
+                        <li><strong>Facilitator:</strong> Fortune Generation Organization</li>
+                        <li><strong>Organizer:</strong> Taifa La Fursa</li>
+                        <li><strong>Strategic Focus:</strong> Kenya-China investment partnerships</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Fortune Generation Chinese Business Delegation to Kenya. All rights reserved.</p>
+                <p>This is an invitation-only high-level business forum.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileToggle.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+            
+            // Progress bar
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        });
+        
+        // Tab switching for agenda
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const agendaContents = document.querySelectorAll('.agenda-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                agendaContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Show corresponding content
+                const day = btn.getAttribute('data-day');
+                document.getElementById(day).classList.add('active');
+            });
+        });
+        
+        // Countdown timer
+        function updateCountdown() {
+            const eventDate = new Date('January 21, 2026 15:30:00').getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            // Time calculations
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the countdown
+            const countdownContainer = document.getElementById('countdownContainer');
+            countdownContainer.innerHTML = `
+                <div class="countdown-item">
+                    <div class="countdown-number">${days}</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">${hours}</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">${minutes}</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number">${seconds}</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            `;
+            
+            // If the countdown is over
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                countdownContainer.innerHTML = "<h3 style='color: white;'>The event has started!</h3>";
+            }
+        }
+        
+        // Initialize countdown
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Run immediately
+        
+        // Speakers data
+        const speakers = [
+            {
+                name: "Mr. Martin Hang",
+                title: "Founder & Chairman, Fortune Generation",
+                topic: "Turning Connections into Contracts: Structuring Sustainable Kenya-China Business Engagements"
+            },
+            {
+                name: "Mr. Willy Jin (Jin Shi)",
+                title: "Chief Financial Officer (CFO), YXinData Technology",
+                topic: "Data centers, AI infrastructure, and liquid cooling technologies"
+            },
+            {
+                name: "Ms. Phoebe Zhao (Zhao Xuanyi)",
+                title: "Director, Hefei Oriental Energy Saving Technology Co., Ltd.",
+                topic: "Research, development, and manufacturing of rolling mill equipment and metallurgical machinery"
+            },
+            {
+                name: "Mr. Duke Wu",
+                title: "Board Member, China East Education Group",
+                topic: "Vocational education, skills development, and international training partnerships"
+            },
+            {
+                name: "Ms. Cindy Wu",
+                title: "Chief Information Officer (CIO), Xi'an Lanshen New Material Technology Co., Ltd",
+                topic: "Polymer functional separation materials research and application"
+            },
+            {
+                name: "Mr. Yisen Sun",
+                title: "Senior Executive, Zhejiang Jingyang Mechanical & Electrical Co., Ltd.",
+                topic: "Photovoltaic manufacturing equipment and renewable energy value chains"
+            },
+            {
+                name: "Ms. Lulu Meng",
+                title: "CEO, Enjoy Airport Commercial Group",
+                topic: "Airport commercial operations specializing in retail, catering, and consumer services"
+            },
+            {
+                name: "Mr. Robert Sun",
+                title: "ACCS President, American-Chinese Ceo Society - Africa Chapter",
+                topic: "From Entry to Expansion: Insights from ACCS Africa Chapter"
+            }
+        ];
+        
+        // Populate speakers
+        const speakersContainer = document.getElementById('speakersContainer');
+        speakers.forEach(speaker => {
+            const speakerCard = document.createElement('div');
+            speakerCard.className = 'speaker-card';
+            speakerCard.innerHTML = `
+                <div class="speaker-img">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="speaker-info">
+                    <h3 class="speaker-name">${speaker.name}</h3>
+                    <p class="speaker-title">${speaker.title}</p>
+                    <p class="speaker-topic">${speaker.topic}</p>
+                </div>
+            `;
+            speakersContainer.appendChild(speakerCard);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.speaker-card, .outcome-card, .highlight-item');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if(elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.speaker-card, .outcome-card, .highlight-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+        
+        // Run animation on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        // Run once on load
+        setTimeout(animateOnScroll, 300);
+    </script>
+</body>
+</html>
